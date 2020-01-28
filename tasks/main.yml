@@ -1,0 +1,29 @@
+---
+
+# https://github.com/SeleniumHQ/docker-selenium
+- name: bring up selenium grid hub
+  become: yes
+  docker_compose:
+    project_name: "{{ docker_selenium_grid_hub_project_name }}"
+    definition:
+      version: '2'
+      services:
+        hub:
+          image: "selenium/hub:{{ docker_selenium_grid_hub_version }}"
+          container_name: "{{ docker_selenium_grid_hub_container_name }}"
+          ports:
+            - "{{ docker_selenium_grid_hub_port }}:{{ docker_selenium_grid_hub_port }}"
+          volumes:
+            - /dev/shm:/dev/shm
+          environment:
+            HUB_HOST: "{{ docker_selenium_grid_hub_dns }}"
+            HUB_PORT: "{{ docker_selenium_grid_hub_port }}"
+          restart: always
+  register: docker_compose_output
+
+- assert:
+  that:
+    - "docker_compose_output.ansible_facts.hub.{{ docker_selenium_grid_hub_container_name }}.state.running"
+
+- include_tasks: restart.yml
+  when: docker_selenium_grid_hub_restart_always == yes
