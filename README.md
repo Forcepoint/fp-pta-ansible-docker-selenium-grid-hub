@@ -29,7 +29,8 @@ None
 
     - hosts: servers
       vars:
-        docker_selenium_grid_hub_version: latest
+        docker_selenium_grid_hub_dns: selenhub.COMPANY.com
+        docker_selenium_grid_hub_port: 4444
       roles:
          - role: docker-selenium-grid-hub
 
