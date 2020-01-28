@@ -2,6 +2,8 @@
 
 Setup a Selenium Grid Hub in a docker container. You can access the Hub's console at an address similar to this: http://selenhub.COMPANY.com:4444/grid/console
 
+https://github.com/SeleniumHQ/docker-selenium
+
 ## Requirements
 
 None
