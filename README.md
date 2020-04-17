@@ -38,7 +38,7 @@ None
 
 ## License
 
-BSD
+BSD-3-Clause
 
 ## Author Information
 
