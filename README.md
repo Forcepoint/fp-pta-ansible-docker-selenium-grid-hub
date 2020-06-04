@@ -6,7 +6,7 @@ https://github.com/SeleniumHQ/docker-selenium
 
 ## Requirements
 
-Run the role docker-host on the host.
+The host is already configured as a docker host.
 
 ## Role Variables
 
