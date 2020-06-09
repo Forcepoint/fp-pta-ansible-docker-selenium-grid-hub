@@ -4,6 +4,8 @@ Setup a Selenium Grid Hub in a docker container. You can access the Hub's consol
 
 https://github.com/SeleniumHQ/docker-selenium
 
+For information about PTA and how to use it with this Ansible role please visit https://github.com/Forcepoint/fp-pta-overview/blob/master/README.md
+
 ## Requirements
 
 The host is already configured as a docker host.
