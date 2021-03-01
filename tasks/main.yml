@@ -21,9 +21,5 @@
           restart: always
   register: docker_compose_output
 
-- assert:
-    that:
-      - "docker_compose_output.ansible_facts.hub.{{ docker_selenium_grid_hub_container_name }}.state.running"
-
 - include_tasks: restart.yml
   when: docker_selenium_grid_hub_restart_always == true
