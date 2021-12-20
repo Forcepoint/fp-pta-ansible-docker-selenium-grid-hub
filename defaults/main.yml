@@ -1,3 +1,4 @@
 ---
 
+docker_selenium_grid_hub_version: "latest"
 docker_selenium_grid_hub_restart_always: no
