@@ -21,5 +21,7 @@
           restart: always
   register: docker_compose_output
 
-- include_tasks: restart.yml
+- name: restart the os
+  become: yes
+  ansible.builtin.reboot:
   when: docker_selenium_grid_hub_restart_always == true
