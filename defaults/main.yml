@@ -1,6 +1,3 @@
 ---
 
-docker_selenium_grid_hub_version: "latest"
-docker_selenium_grid_hub_container_name: "hub"
-docker_selenium_grid_hub_project_name: "seleniumgrid"
 docker_selenium_grid_hub_restart_always: no
