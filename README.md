@@ -1,6 +1,7 @@
 # docker-selenium-grid-hub
 
-Setup a Selenium Grid Hub in a docker container. You can access the Hub's console at an address similar to this: http://selenhub.COMPANY.com:4444/grid/console
+Setup a Selenium Grid Hub in a docker container. You can access the Hub's console at an address 
+similar to this: http://selenhub.COMPANY.com:4444
 
 The publish port will be 4442, the subscribe port will be 4443, and the http port will be 4444.
 
@@ -16,7 +17,7 @@ The host is already configured as a docker host.
 
 ### REQUIRED
 
-None
+* docker_selenium_grib_hub_host_dns: The DNS/IP of the system running this container.
 
 ### OPTIONAL
 

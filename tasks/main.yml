@@ -17,6 +17,8 @@
             - "4444:4444"
           volumes:
             - /dev/shm:/dev/shm
+          environment:
+            - SE_HUB_HOST={{ docker_selenium_grib_hub_host_dns }}
           restart: always
 
 - name: restart the os
