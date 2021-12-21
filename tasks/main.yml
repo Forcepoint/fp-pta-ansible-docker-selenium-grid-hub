@@ -3,8 +3,9 @@
 # https://github.com/SeleniumHQ/docker-selenium
 - name: bring up selenium grid hub
   become: yes
-  docker_compose:
+  community.docker.docker_compose:
     project_name: "seleniumgrid"
+    pull: yes
     definition:
       version: '2'
       services:
